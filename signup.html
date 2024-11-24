@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sign-up">
+        <div class="container">
+            <div class="sign-up__wrap">
+                <h1 class="sign-up__title">Регистрация аккаунта</h1>
+                <input class="sign-up__input" type="text" placeholder="Имя">
+                <input class="sign-up__input" type="text" placeholder="Фамилия">
+                <div class="sign-up__radio-block">
+                    <div>
+                        <input class="sign-up__radio" type="radio" name="gender" id="мужчина" value="мужчина">
+                        <label class="sign-up__radio-text" for="мужчина">Мужчина</label>
+                    </div>
+                    <div>
+                        <input class="sign-up__radio" type="radio" name="gender" id="женщина" value="женщина">
+                        <label class="sign-up__radio-text" for="женщина">Женщина</label>
+                    </div>
+                    
+                </div>
+                <h2 class="sign-up__sub-title">дата рождения</h2>
+                <input class="sign-up__input" type="date" placeholder="ДД.ММ.ГГГГ">
+                <h2 class="sign-up__sub-title">данные для входа в сервис</h2>
+                <input class="sign-up__input" type="email" placeholder="Email">
+                <input class="sign-up__input" type="password" placeholder="Пароль">
+                <a class="sign-up__big-btn" href="../index.html">зарегистрироваться</a>
+                <div class="sign-up__block">
+                    <p class="sign-up__text">Уже есть аккаунт</p>
+                    <a href="../signin/signin.html" class="sign-up__btn">войти</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
