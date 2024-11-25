@@ -628,6 +628,18 @@
 .card__pag {
   margin: 0 auto;
 }
+.card__back-btn {
+  font-size: 22px;
+  position: relative;
+  top: 20px;
+}
+.card__card-title {
+  margin-top: 50px;
+}
+.card__card-text {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .card__container {
   max-width: 1220px;
   margin: 0 auto;
@@ -654,6 +666,9 @@
 }
 .card__card:hover {
   transform: scale(1.03);
+}
+.card__card-img {
+  text-align: center;
 }
 .card__card-pic {
   width: 500px;
@@ -689,6 +704,10 @@
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 17px;
+}
+
+.qwerty {
+  text-align: center;
 }
 
 .contacts__container {

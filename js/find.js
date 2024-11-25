@@ -19,9 +19,19 @@ async function getResponse() {
             <p class="card__card-txt">${item.text}</p>
             <p class="card__card-add">${item.addres}</p>
           </div>
-          
         `;
-        list.appendChild(cardSection);
+        cardSection.addEventListener('click', () => {
+          const urlParams = new URLSearchParams();
+          urlParams.append('title', item.title);
+          urlParams.append('img', item.img);
+          urlParams.append('details', item.text); // Assuming 'text' holds detailed info
+          urlParams.append('map', item.map); // Assuming 'map' holds the map embed URL
+          urlParams.append('addres', item.addres);
+  
+          window.location.href = `info.html?${urlParams.toString()}`;
+        });
+  
+        list.append(cardSection);
       });
     }
   function filterCards() {
@@ -40,6 +50,3 @@ async function getResponse() {
 }
 
 getResponse();
-
-
-//Modal window
