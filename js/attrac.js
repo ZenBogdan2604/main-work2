@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', async function () {
   const itemsPerPage = 1;
   let currentPage = 0;
   let items = [];
-  const mask = await document.querySelector('.mask');
+  const mask = document.querySelector('.mask');
 
   window.addEventListener('DOMContentLoaded', () => {
-      mask.classList.add('hide');
+      mask.classList.add('active');
   });
       const response = await fetch('https://672dfd95fd89797156449049.mockapi.io/Monument');
       const data = await response.json();
@@ -24,12 +24,13 @@ document.addEventListener('DOMContentLoaded', async function () {
               </div>
             </section>`;
             
+            
       });
-
+      mask.classList.replace('active', 'hidden')
       items = Array.from(content.querySelectorAll('.card__pag'));
       createPageButtons();
+      
       showPage(currentPage);
-
   function showPage(page) {
       const startIndex = page * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       items.forEach((item, index) => {
           item.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';
       });
+      
   }
 
   function createPageButtons() {

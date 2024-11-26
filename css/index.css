@@ -670,6 +670,24 @@
 .card__card-img {
   text-align: center;
 }
+@media (max-width: 870px) {
+  .card__card-img {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .card__card-img {
+    width: 300px;
+  }
+}
+.card__card__card-map {
+  width: 300px;
+}
+@media (max-width: 540px) {
+  .card__card__card-map {
+    width: 300px;
+  }
+}
 .card__card-pic {
   width: 500px;
   border-radius: 15px 15px 0px 0px;

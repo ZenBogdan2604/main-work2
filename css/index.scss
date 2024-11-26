@@ -634,6 +634,18 @@
         }
         &-img{
             text-align: center;
+            @media (max-width:870px) {
+                width: 500px;
+            }
+            @media (max-width:550px) {
+                width: 300px;
+            }
+        }
+        &__card-map{
+            width: 300px;
+            @media (max-width:540px) {
+                width: 300px;
+            }
         }
         &-pic{
             width: 500px;

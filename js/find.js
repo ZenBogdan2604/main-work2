@@ -24,8 +24,8 @@ async function getResponse() {
           const urlParams = new URLSearchParams();
           urlParams.append('title', item.title);
           urlParams.append('img', item.img);
-          urlParams.append('details', item.text); // Assuming 'text' holds detailed info
-          urlParams.append('map', item.map); // Assuming 'map' holds the map embed URL
+          urlParams.append('details', item.details);
+          urlParams.append('map', item.map);
           urlParams.append('addres', item.addres);
   
           window.location.href = `info.html?${urlParams.toString()}`;
