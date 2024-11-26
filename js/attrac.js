@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', async function () {
       mask.classList.replace('active', 'hidden')
       items = Array.from(content.querySelectorAll('.card__pag'));
       createPageButtons();
-      
       showPage(currentPage);
-  function showPage(page) {
-      const startIndex = page * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
+      
+      function showPage(page) {
+        const startIndex = page * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
 
       items.forEach((item, index) => {
           item.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';

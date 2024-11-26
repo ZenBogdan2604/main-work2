@@ -28,7 +28,7 @@ async function getResponse() {
           urlParams.append('map', item.map);
           urlParams.append('addres', item.addres);
   
-          window.location.href = `info.html?${urlParams.toString()}`;
+          window.location.href = `info.html?${urlParams}`;
         });
   
         list.append(cardSection);

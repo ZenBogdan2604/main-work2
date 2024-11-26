@@ -18,3 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <a class='card__back-btn' href = "./attrac.html">Назад</p>
     `; 
 });
+
+
+
+
+
+
