@@ -967,7 +967,9 @@ input[type="radio"]:checked {
 //PAGINATION
 .content {
     margin: 20px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     &__title{
         margin: 0 auto;

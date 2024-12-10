@@ -1022,7 +1022,9 @@ input[type=radio]:checked {
 
 .content {
   margin: 20px;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 .content__title {
