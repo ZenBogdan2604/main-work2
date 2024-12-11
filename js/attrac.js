@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', async function () {
       const url = new URL('https://672dfd95fd89797156449049.mockapi.io/Monument');
       url.searchParams.append('page', page);
       url.searchParams.append('limit', itemsPerPage);
-
       const response = await fetch(url);
       const data = await response.json();
       content.innerHTML = '';
