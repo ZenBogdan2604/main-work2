@@ -11,7 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="mask">
+    <!-- <div class="mask">
+        <div class="loader"></div>
+    </div> -->
+    <div class="mask hidden">
         <div class="loader"></div>
     </div>
     <header class="header">
@@ -44,9 +47,15 @@
             </nav>
         </div>
         <main class="card">
-            <section class="content">
+           
+            <div class="wrap"></div>
+            <div class="content__container">
                 <h1 class="content__title">Самые популярные достопримечательности</h1>
-            </section>
+                <div class="content">
+                    <!-- Мы есть карточки -->
+                </div>
+            </div>
+            <div class="pagination"></div> 
             <section class="find">
                 <div class="find__container">
                     <div class="find__finder">
@@ -66,6 +75,16 @@
                             <button class="section__button">Связаться с нами</button>
                         </section>
                     </div>
+                    <section class="comment">
+                        <div class="comment__container">
+                            <div class="comment__wrap">
+                                <h2 class="comment__title">Отзывы</h2>
+                                <div class="comment__content">
+                                    <!-- Я есть отзыв -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </section>
         </main>
@@ -91,24 +110,25 @@
                         <ul>
                             <li><a class="footer__text fir" href="./contacts.html">Перейти</a></li>
                         </ul>
-                        <section class="section">
-                            <button class="section__button">Связаться с нами</button>
-                        </section>
-                          <div class="modal modal1">
-                            <div class="modal__main">
-                              <h2 class="modal__title">Связаться со мной</h2>
-                              
-                              <div class="modal__container">
-                                <input type="email" placeholder="Ваш email" class="modal__email">
-                                <input type="text" placeholder="Ваш вопрос" class="modal__text">
-                              </div>
-                        
-                              <a href=""><button class="modal__btn">Отправить</button></a>
-                              <button class="modal__close">&#10006;</button>
+                        <button class="section__button" id="modal__btn">Open</button>
+                    <div class="modal hide" id="modal">
+                        <div class="modal__content">
+                            <div class="modal modal1">
+                                <div class="modal__main">
+                                  <h2 class="modal__title">Связаться со мной</h2>
+                                
+                                  <div class="modal__container">
+                                    <input type="email" placeholder="Ваш email" class="modal__email">
+                                    <input type="text" placeholder="Ваш вопрос" class="modal__text">
+                                  </div>
+                            
+                                  <a href=""><button class="modal__btn">Отправить</button></a>
+                                  <button id="modal__close" class="modal__close">&#10006;</button>
+                                </div> 
                             </div>
-                          </div>
+                        </div>
                     </div>
-                    
+                    </div>
                 </div>
                 <hr class="footer__hr">
                 <div class="footer__under">
@@ -126,4 +146,5 @@
 <script src="./js/attrac.js"></script>
 <script src="./js/find.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/comment.js"></script>
 </html>

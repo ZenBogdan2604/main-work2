@@ -45,22 +45,24 @@
                 <div class="contacts__block">
                     <p class="contacts__email">zenbog2008@gmail.com</p>
                     <p class="contacts__email">+7(951)061-19-13</p>
-                    <section class="section__contacts">
-                        <button class="section__button section__button1">Связаться с нами</button>
-                    </section>
-                      <div class="modal modal1">
-                        <div class="modal__main">
-                          <h2 class="modal__title">Связаться со мной</h2>
-                          
-                          <div class="modal__container">
-                            <input type="email" placeholder="Ваш email" class="modal__email">
-                            <input type="text" placeholder="Ваш вопрос" class="modal__text">
-                          </div>
-                    
-                          <a href=""><button class="modal__btn">Отправить</button></a>
-                          <button class="modal__close">&#10006;</button>
+                    <button class="section__button" id="modal__btn">Open</button>
+                    <div class="modal hide" id="modal">
+                        <div class="modal__content">
+                            <div class="modal modal1">
+                                <div class="modal__main">
+                                  <h2 class="modal__title">Связаться со мной</h2>
+                                
+                                  <div class="modal__container">
+                                    <input type="email" placeholder="Ваш email" class="modal__email">
+                                    <input type="text" placeholder="Ваш вопрос" class="modal__text">
+                                  </div>
+                            
+                                  <a href=""><button class="modal__btn">Отправить</button></a>
+                                  <button id="modal__close" class="modal__close">&#10006;</button>
+                                </div> 
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
