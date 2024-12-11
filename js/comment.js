@@ -3,9 +3,8 @@ const commentContent = document.querySelector('.comment__content');
 fetch('https://672dfd95fd89797156449049.mockapi.io/comment')
 .then(response => response.json())
 .then(comments => {
-    let commentHTML = '';
     comments.forEach(comment => {
-    commentHTML += `
+        commentContent.innerHTML += `
         <div class="comment__item">
             <div class="comment__avatar-block">
                 <img class="comment__img" src='${comment.img}'>
@@ -15,9 +14,7 @@ fetch('https://672dfd95fd89797156449049.mockapi.io/comment')
         </div>
     `;
     });
-    commentContent.innerHTML = commentHTML;
 })
 .catch(error => {
-    console.error('Ошибка при загрузке комментариев:', error);
     commentContent.innerHTML = '<p>Не удалось загрузить комментарии.</p>';
 });

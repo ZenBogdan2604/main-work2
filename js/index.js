@@ -12,7 +12,6 @@ function clearActiveClasses () {
     })
 }
 
-
 //Modal window
 const modal = document.getElementById('modal');
 const modalBtn = document.getElementById('modal__btn');
@@ -24,6 +23,6 @@ modalBtn.onclick = function(){
 
 modalClose.onclick = function(){
     modal.classList.add('hide')
-}  
+}
 
 
