@@ -72,11 +72,3 @@ menuItem.addEventListener('click',function(){
 })
 });
 
-
-
-
-
-
-
-
-
