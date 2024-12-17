@@ -1,19 +1,8 @@
-<<<<<<< Updated upstream
 document.addEventListener('DOMContentLoaded', async function () {
   const content = document.querySelector('.content');
   const itemsPerPage = 5;
   let currentPage = 1;
   const mask = document.querySelector('.mask');
-=======
-    class PaginationApp {
-        constructor() {
-            this.content = document.querySelector('.content');
-            this.itemsPerPage = 5;
-            this.currentPage = 1;
-            this.mask = document.querySelector('.mask');
-            this.paginationContainer = null;
-        }
->>>>>>> Stashed changes
 
   async function fetchData(page) {
       mask.classList.replace('hidden', 'active');
@@ -65,30 +54,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       mask.classList.add('active');
   });
 
-<<<<<<< Updated upstream
   initialLoad();
-=======
-            for (let i = 1; i <= totalPages; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i;
-                pageButton.addEventListener('click', () => {
-                    this.currentPage = i;
-                    this.fetchData(this.currentPage);
-                });
-                this.paginationContainer.append(pageButton);
-            }
-        }
-
-        async initialLoad() {
-            await this.fetchData(this.currentPage);
-            const totalPages = await this.getTotalPages();
-            this.createPageButtons(totalPages);
-        }
-    }
-
-    const app = new PaginationApp();
-    app.initialLoad();
->>>>>>> Stashed changes
 
 
 
