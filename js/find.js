@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 async function getResponse() {
   const response = await fetch('https://672dfd95fd89797156449049.mockapi.io/Monument');
   let content = await response.json();
@@ -6,6 +7,24 @@ async function getResponse() {
   const cardFinder = document.getElementById('card-finder');
     function displayCards(items) {
       list.innerHTML = ''; 
+=======
+  class CardFinderApp {
+    constructor(listSelector, searchInputId, cardFinderId) {
+      this.list = document.querySelector(listSelector);
+      this.searchInput = document.getElementById(searchInputId);
+      this.cardFinder = document.getElementById(cardFinderId);
+      this.content = [];
+    }
+
+    async fetchData() {
+      const response = await fetch('https://672dfd95fd89797156449049.mockapi.io/Monument');
+      this.content = await response.json();
+      this.displayCards(this.content);
+    }
+
+    displayCards(items) {
+      this.list.innerHTML = '';
+>>>>>>> Stashed changes
       items.forEach(item => {
         const cardSection = document.createElement('section');
         cardSection.id = `card-${item.id}`;
@@ -20,6 +39,7 @@ async function getResponse() {
             <p class="card__card-add">${item.addres}</p>
           </div>
         `;
+<<<<<<< Updated upstream
         cardSection.addEventListener('click', () => {
           const urlParams = new URLSearchParams();
           urlParams.append('title', item.title);
@@ -50,3 +70,41 @@ async function getResponse() {
 }
 
 getResponse();
+=======
+        cardSection.addEventListener('click', () => this.handleCardClick(item));
+        this.list.append(cardSection);
+      });
+    }
+
+    handleCardClick(item) {
+      const params = {
+        title: item.title,
+        img: item.img,
+        details: item.details,
+        map: item.map,
+        addres: item.addres
+      };
+      const urlParams = new URLSearchParams(params);
+      window.location.href = `info.html?${urlParams}`;
+    }
+
+    filterCards() {
+      const searchQuery = this.searchInput.value.trim().toLowerCase();
+      const selectedCategory = this.cardFinder.value;
+      const filteredContent = this.content.filter(item =>
+        (!selectedCategory || (item.filter && item.filter.includes(selectedCategory))) &&
+        item.title.toLowerCase().includes(searchQuery)
+      );
+      this.displayCards(filteredContent);
+    }
+
+    init() {
+      this.fetchData();
+      this.searchInput.addEventListener('input', () => this.filterCards());
+      this.cardFinder.addEventListener('change', () => this.filterCards());
+    }
+  }
+
+  const cardFinderApp = new CardFinderApp('.find__block-card', 'searchInfo', 'card-finder');
+  cardFinderApp.init();
+>>>>>>> Stashed changes
